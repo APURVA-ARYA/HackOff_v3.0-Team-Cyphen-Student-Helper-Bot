@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
+import "../style/form.css";
 import ChatBot from "react-simple-chatbot";
 import "../style/chatbot.css";
-import LinkToResume from "./LinkToResume";
 
 export const Form = () => {
   // const [name, setName] = useState(``);
@@ -19,7 +19,7 @@ export const Form = () => {
   //   projects: [],
   //   education: ``,
   // });
-  const [resumeData, setResumeData] = useState(false);
+  const [data, setdata] = useState(localStorage["resumeData"]);
   const handleEnd = ({ steps, values }) => {
     localStorage.clear();
     // console.log(steps);
@@ -35,7 +35,6 @@ export const Form = () => {
     //   education: `${values[5]}`,
     // });
     localStorage.setItem("resumeData", JSON.stringify(values));
-    setResumeData(true);
   };
 
   return (
@@ -123,7 +122,7 @@ export const Form = () => {
           },
         ]}
       />
-      <LinkToResume resumeData={resumeData} />
+      <Link to="/resume-data">Resume</Link>
     </div>
   );
 };
