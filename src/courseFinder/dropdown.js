@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function Dropdown({ title, items, multiSelect = false }) {
   const [open, setOpen] = useState(false);
@@ -6,7 +6,7 @@ function Dropdown({ title, items, multiSelect = false }) {
   const toggle = () => setOpen(!open);
 
   function handleOnClick(item) {
-    if (!selection.some(current => current.id === item.id)) {
+    if (!selection.some((current) => current.id === item.id)) {
       if (!multiSelect) {
         setSelection([item]);
       } else if (multiSelect) {
@@ -15,7 +15,7 @@ function Dropdown({ title, items, multiSelect = false }) {
     } else {
       let selectionAfterRemoval = selection;
       selectionAfterRemoval = selectionAfterRemoval.filter(
-        current => current.id !== item.id
+        (current) => current.id !== item.id
       );
       setSelection([...selectionAfterRemoval]);
     }
@@ -28,23 +28,20 @@ function Dropdown({ title, items, multiSelect = false }) {
         className="dd-header"
         role="button"
         onKeyPress={() => toggle(!open)}
-        onClick={() => toggle(!open)}
-      >
+        onClick={() => toggle(!open)}>
         <div className="dd-header__title">
-          <p className="dd-header__title--bold">{title}</p>
+          <h1 className="dd-header__title--bold">{title}</h1>
         </div>
-        <div className="dd-header__action">
-        
-        </div>
+        <div className="dd-header__action"></div>
       </div>
       {open && (
         <ul className="dd-list">
-          {items.map(item => (
+          {items.map((item) => (
             <li className="dd-list-item" key={item.id}>
               <button type="button" onClick={() => handleOnClick(item)}>
                 <span>{item.value}</span>
                 <span>{item.link}</span>
-            </button>
+              </button>
             </li>
           ))}
         </ul>
@@ -53,6 +50,4 @@ function Dropdown({ title, items, multiSelect = false }) {
   );
 }
 
-
-
-export default Dropdown
+export default Dropdown;

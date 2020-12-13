@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../style/homepage.css";
-
-function HomePage() {
+const HomePage = () => {
   return (
     <div className="mainpage">
       <section className="section-plans" id="section-plans">
@@ -50,7 +49,7 @@ function HomePage() {
               <div className="card__side card__side--back card__side--back-2">
                 <div className="card__cta">
                   <div className="card__info">
-                    <Link to="/course-finder">
+                    <Link to="./course-finder">
                       <button className="btn">GO TO COURSE FINDER</button>
                     </Link>
                   </div>
@@ -62,6 +61,6 @@ function HomePage() {
       </section>
     </div>
   );
-}
+};
 
 export default HomePage;

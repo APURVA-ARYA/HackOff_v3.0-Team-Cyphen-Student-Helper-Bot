@@ -3,6 +3,7 @@ import ResumeData from "./components/ResumeData";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import CourseFinder from "./courseFinder/CourseFinder";
 import HomePage from "./components/HomePage";
+import "./style/App.css";
 function App() {
   return (
     <Router>
