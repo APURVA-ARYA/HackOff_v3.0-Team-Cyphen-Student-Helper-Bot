@@ -1,44 +1,44 @@
-/* .resume{
-    width: 100%;
-    } */
-    .main{
-        height: 15vh;
-        background-color: #2a2a2a;
-    }
-    .center-div{
-        display: flex;
-    
-    }
-    .left-div{
-        height: 100vh;
-        width: 20%;
-        background: #c2ddb9;
-        border: 1px solid #707070;
-    }
-    .right-div{
-        float: right;
-        height: 100vh;
-        width: 80%;
-        border: 1px solid #707070;
-        margin-top: 0px;
-    }
-    
-    .main h1 {
-        display: flex;
-        justify-content: center;
-    }
-    .left-div h1 {
-        margin: 40px;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    
-    .right-div h1{
-         display: flex;
-         flex-direction: column;
-         justify-content: space-evenly;
-         margin: 30px;
-         padding: 20px;
-    }
+.resume {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.resume-header {
+  display: flex;
+  flex-direction: column;
+  background: #2a2a2a;
+  border-radius: 10px;
+  align-items: center;
+  color: azure;
+  width: 70%;
+}
+.resume-body {
+  display: flex;
+}
+/* #c2ddb9 */
+.resume-left {
+  display: flex;
+  flex-direction: column;
+  background: #c2ddb9;
+  height: 60vh;
+  padding: 20px;
+  margin: 2rem;
+  border-radius: 10px;
+  width: 60vw;
+  flex: 0.3;
+  margin-bottom: 30px;
+}
+.resume-right {
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  padding: 20px;
+  margin: 2rem;
+
+  border-radius: 10px;
+}
+.resume-button {
+  display: flex;
+  justify-content: center;
+}
