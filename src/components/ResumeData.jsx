@@ -5,35 +5,27 @@ const ResumeData = () => {
   // console.log(resumeData[0]);
   return (
     <div className="resume">
-      {resumeData ? resumeData[0] : ``}
       <div className="main">
-        <h1 className="name">name</h1>
-        <h1 className="profession">profession</h1>
+        <h1 className="name"> {resumeData ? resumeData[0] : ``}</h1>
+        <h1 className="profession"> {resumeData ? resumeData[1] : ``}</h1>
       </div>
       <div className="center-div">
         <div className="left-div">
           <h1 className="about">
-            about{" "}
-            <p>
-              ndcndjcdsc dcndsjcndsjcd kndc jdsjdc jdckjdsds cnkdcndndcd
-              kncwdcdc kwncojdcc
-            </p>
+            about
+            <p>{resumeData ? resumeData[2] : ``}</p>
           </h1>
           <h1 className="skills">
             skills
-            <p>jbdibdd djbcddc ncjncrc ncjc njcrc inrjec nircrc ncwc nrwcrc</p>
+            <p> {resumeData ? resumeData[3] : ``}</p>
           </h1>
         </div>
         <div className="right-div">
           <h1 className="projects">
             projects
-            <p>
-              cbcbdcbduuc iwr wihehdje eedkn iei c eeefiea si p jefieiae e
-              export default ejbeihcejef ejehj ej e echeh ceh
-              cweihceihiewchdhaehifie ifieef;
-            </p>
+            <p>{resumeData ? resumeData[4] : ``}</p>
           </h1>
-          <h1 className="education">education</h1>
+          <h1 className="education"> {resumeData ? resumeData[5] : ``}</h1>
         </div>
       </div>
     </div>
