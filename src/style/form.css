@@ -1,0 +1,14 @@
+.chatbot-main-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+.avatar {
+  height: 100px;
+  width: 100px;
+}

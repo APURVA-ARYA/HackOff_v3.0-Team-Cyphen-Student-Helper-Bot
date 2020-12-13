@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../style/form.css";
 import ChatBot from "react-simple-chatbot";
 import "../style/chatbot.css";
+
 
 export const Form = () => {
   // const [name, setName] = useState(``);
@@ -19,7 +20,7 @@ export const Form = () => {
   //   projects: [],
   //   education: ``,
   // });
-  const [data, setdata] = useState(localStorage["resumeData"]);
+
   const handleEnd = ({ steps, values }) => {
     localStorage.clear();
     // console.log(steps);
@@ -39,6 +40,15 @@ export const Form = () => {
 
   return (
     <div className="chatbot-main-div">
+      <img
+        className="avatar"
+        src="https://media.istockphoto.com/vectors/cute-smiling-robot-chat-bot-say-hivector-modern-flat-cartoon-voice-vector-id1073076312?b=1&k=6&m=1073076312&s=612x612&w=0&h=MLhESI7N3cyGo-Flb36_42zPyL5q0SvmTRS0MF4lZiU="
+        alt=""
+      />
+      {/* <Avatar
+        sizes="100px"
+        src="https://media.istockphoto.com/vectors/cute-smiling-robot-chat-bot-say-hivector-modern-flat-cartoon-voice-vector-id1073076312?b=1&k=6&m=1073076312&s=612x612&w=0&h=MLhESI7N3cyGo-Flb36_42zPyL5q0SvmTRS0MF4lZiU="
+      /> */}
       <ChatBot
         handleEnd={handleEnd}
         recognitionEnable={true}
