@@ -40,7 +40,11 @@ const ResumeData = () => {
           x={0.5}
           y={0.5}
           scale={0.8}>
-          {({ toPdf }) => <button onClick={toPdf}>Generate pdf</button>}
+          {({ toPdf }) => (
+            <button className="pdf-button" onClick={toPdf}>
+              Generate pdf
+            </button>
+          )}
         </ReactToPdf>
       </div>
     </div>

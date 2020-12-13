@@ -1,9 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../style/form.css";
 import ChatBot from "react-simple-chatbot";
-import "../style/chatbot.css";
-
 
 export const Form = () => {
   // const [name, setName] = useState(``);
@@ -21,6 +19,8 @@ export const Form = () => {
   //   education: ``,
   // });
 
+  const names = ["Angela", "Woebot", "CleverBot", "Eliza", "Poncho"];
+  let randomName = names[Math.floor(Math.random() * names.length)];
   const handleEnd = ({ steps, values }) => {
     localStorage.clear();
     // console.log(steps);
@@ -49,14 +49,17 @@ export const Form = () => {
         sizes="100px"
         src="https://media.istockphoto.com/vectors/cute-smiling-robot-chat-bot-say-hivector-modern-flat-cartoon-voice-vector-id1073076312?b=1&k=6&m=1073076312&s=612x612&w=0&h=MLhESI7N3cyGo-Flb36_42zPyL5q0SvmTRS0MF4lZiU="
       /> */}
+
       <ChatBot
         handleEnd={handleEnd}
         recognitionEnable={true}
+        userAvatar="https://alltop9.com/wp-content/uploads/2019/09/i6.png"
+        width="500px"
         speechSynthesis={{ enable: true, lang: "en" }}
         steps={[
           {
             id: "welcome",
-            message: "Hello there! I am Angela your chatBot for the day.",
+            message: `Hello there! I am ${randomName} your helper chatBot.`,
             trigger: "1",
           },
           {
@@ -106,7 +109,8 @@ export const Form = () => {
           },
           {
             id: "10",
-            message: "Man you are wonderful have you created some projects ?",
+            message:
+              "Man you are wonderful can you name some of your projects ?",
             trigger: "11",
           },
           {
@@ -132,7 +136,9 @@ export const Form = () => {
           },
         ]}
       />
-      <Link to="/resume-data">Resume</Link>
+      <Link to="/resume-data">
+        <button className="form-link">Click here to see your resume</button>
+      </Link>
     </div>
   );
 };
